@@ -1,0 +1,16 @@
+[project]
+name = "probetraffic"
+version = "0.1.0"
+description = "Noisy GPS probes to per-segment speeds and closures, with exact synthetic ground truth"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26", "pandas>=2.1", "scipy>=1.11", "pyarrow>=14", "pyyaml>=6"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["prototype"]
+
+[tool.pytest.ini_options]
+testpaths = ["prototype/tests"]
+pythonpath = ["prototype"]
